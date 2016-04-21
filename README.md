@@ -78,8 +78,8 @@ Probably not.
 Doubtful. I'm not sure the code to read characters from `stdin` is cross
 platform, the tokeniser is likely very naive and inefficient, plus I can't be 
 sure it's bug free as I used SDD (Satire Driven Programming) and there is only
-one manual test. Hell, I don't even know if the install instructions work 
-properly ;)
+one manual test. ~~Hell, I don't even know if the install instructions work 
+properly ;)~~ - Appears they do, at least on the Docker image I tried :D
 
 ## TODO
 
