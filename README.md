@@ -15,7 +15,7 @@ Colonoscopy is a turing complete language with 8 operators. These operators
 translate to `C` as follows:
 
 | Symbol | C                 |
-| ====== | ================= |
+| ------ | ----------------- |
 | `;}`   | `++ptr;`          |
 | `;{`   | `--ptr;`          |
 | `;;}`  | `++*ptr;`         |
