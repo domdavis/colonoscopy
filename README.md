@@ -37,7 +37,7 @@ allow you to play with Colonoscopy scripts.
 
 ```
 go get github.com/domdavis/colonoscopy
-go install colonoscopy
+go install github.com/domdavis/colonoscopy
 colonoscopy <sourcefile>
 ```
 
