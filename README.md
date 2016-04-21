@@ -5,30 +5,30 @@ New languages are shunning them and their use seems to be dwindling. So what's
 happening to all those unused characters? We've put them to work, that's what. 
 Introducing Colonoscopy, a 
 [Rho&#8242;&#8242;](https://en.wikipedia.org/wiki/P%E2%80%B2%E2%80%B2), among
-[others](https://en.wikipedia.org/wiki/Brainfuck)(NSFW),
+[others](https://en.wikipedia.org/wiki/Brainfuck) [NSFW],
 influenced language designed purely to use up characters that are no longer seen
 as _useful_ in trendy, modern languages.
 
 ## Syntax
 
 Colonoscopy is a turing complete language with 8 operators. These operators 
-translate to `C` as follows:
+translate to _BF_ and `C` as follows:
 
-| Symbol | C                 |
-| ------ | ----------------- |
-| `;}`   | `++ptr;`          |
-| `;{`   | `--ptr;`          |
-| `;;}`  | `++*ptr;`         |
-| `;;{`  | `--*ptr;`         |
-| `;;;}` | `putchar(*ptr)`   |
-| `;;;{` | `*ptr=getchar();` |
-| `{{`   | `while (*ptr) {`  |
-| `}}`   | `}`               |
+| Symbol | BF  | C                 | Description
+| ------ | --- |------------------ | -----------
+| `;}`   | `+` | `++ptr;`          | Move the pointer to the right
+| `;{`   | `-` | `--ptr;`          | Move the pointer to the left
+| `;;}`  | `>` | `++*ptr;`         | Increment the memory cell under the pointer
+| `;;{`  | `<` | `--*ptr;`         | Decrement the memory cell under the pointer
+| `;;;}` | `.` | `putchar(*ptr)`   | Output the character signified by the cell at the pointer
+| `;;;{` | `,` | `*ptr=getchar();` | Input a character and store it in the cell at the pointer
+| `{{`   | `[` | `while (*ptr) {`  | Jump past the matching `}}` if the cell under the pointer is 0
+| `}}`   | `]` | `}`               | Jump back to the matching `{{`
 
 In addition, each command **must** be terminated with a semi-colon. Other than 
 `EOF`, no other characters are allowed in a colonoscopy program. Those are 
 reserved for other languages that think that `;`, `{` and `}` are too good for
-then.
+them.
 
 ## Interpreter 
 
